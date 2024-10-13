@@ -3,49 +3,55 @@
 #include<stdlib.h>
 #define MAX_SIZE 100
 
-int stack[MAX_SIZE];
-int top=-1;
+int queue[MAX_SIZE];
+int front=0;
+int rear=-1;
+
+bool IsEmpty(){
+    return front>rear;
+}
+
+bool IsFull(){
+    return rear==MAX_SIZE-1;
+}
 
 void Push(){
-    if(top==MAX_SIZE-1){
-        printf("Stack Overflow \n");
+    if(rear==MAX_SIZE-1){
+        printf("Queue Overflow \n");
         return ;
     }
     int n;
     printf("Enter the element to push : ");
     scanf("%d",&n);
-    top++;
-    stack[top]=n;
+    rear++;
+    queue[rear]=n;
 }
 void Pop(){
-     if(top==-1){
-        printf("Stack Underflow \n");
+     if(front>rear){
+        printf("Queue Underflow \n");
         return ;
     }
-    top--;
+    front++;
     printf("Element popped\n");
 
 }
 void Peek(){
-    if(top==-1){
-        printf("Stack Underflow \n");
+    if(IsEmpty()){
+        printf("Queue Underflow \n");
         return ;
     }
-    printf("Last Element is %d\n",stack[top]);
+    printf("Last Element is %d\n",queue[rear]);
 }
-bool IsEmpty(){
-    return top==-1;
-}
+
 void View(){
     if(IsEmpty()){
-        printf("Stack Underflow \n");
+        printf("Queue Underflow \n");
         return;
     }
-    printf("Stack contents are\n");
-    for(int i=top;i>=0;i--){
-        printf(" | %d |\n",stack[i]);
+    printf("Queue contents are\n");
+    for(int i=front;i<=rear;i++){
+        printf("  %d  -> ",queue[i]);
     }
-    printf(" __ \n");
     
 }
 void display(){
