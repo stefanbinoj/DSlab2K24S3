@@ -1,2 +1,1 @@
-[ ] DoubleEndedQueue--linkedlist 
-[ ] PriorityQueue (full)
+[ ] PriorityQueue (heap)
