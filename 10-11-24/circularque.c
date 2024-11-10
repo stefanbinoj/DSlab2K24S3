@@ -22,7 +22,7 @@ void insert(){
     scanf("%d",&n);
     if(isEmpty()){
         front=rear=1;
-        que[rear]=1;
+        que[rear]=n;
     }
     else{
         rear = (rear+1)%MAX;
