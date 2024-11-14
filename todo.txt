@@ -1,1 +1,7 @@
 9,10,11
+tree*3
+quick , merge , heap
+5*graph
+
+
+simulation
