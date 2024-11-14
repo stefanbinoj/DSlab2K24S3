@@ -1,5 +1,5 @@
 9,10,11
-tree*2
+tree*1
 quick , merge , heap
 5*graph
 
