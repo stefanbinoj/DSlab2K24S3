@@ -50,7 +50,7 @@ void postOrderTraversal(struct node * root){
     if (root==NULL) return ;
     postOrderTraversal(root->left);
     postOrderTraversal(root->right);
-    printf("%d --> ",root->data);
+    printf("%d --> ",root->data); 
 }
 
 struct node * search(struct node * root ,int key){

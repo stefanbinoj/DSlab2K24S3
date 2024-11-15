@@ -93,7 +93,7 @@ int main() {
     printf("ASSUMPTION: The infix expression contains single letter variables and single digit constants only.\n");
     printf("\nEnter Infix expression: ");
     scanf("%s", infix); // Read the infix expression
-
+ 
     // Make sure the infix string is properly null-terminated
     infix[strlen(infix)] = '\0'; // Null terminate the string manually if necessary
 

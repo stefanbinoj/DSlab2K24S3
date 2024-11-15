@@ -1,5 +1,0 @@
-quick , merge , heap
-5*graph
-
-
-simulation
